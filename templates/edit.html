@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ item.name }}"><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" value="{{ item.description }}"><br>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="{{ item.price }}"><br>
+
+        <label for="category_id">Category:</label>
+        <select id="category_id" name="category_id">
+            {% for category in categories %}
+                {% if category.id == item.category_id %}
+                    <option value="{{ category.id }}" selected>{{ category.name }}</option>
+                {% else %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endif %}
+            {% endfor %}
+        </select><br>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

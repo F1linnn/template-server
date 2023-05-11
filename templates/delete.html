@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete item</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Удалить товар "{{ item.name }}"?</h2>
+  <form action="{{ url_for('delete_item', id=item.id) }}" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit" class="btn btn-danger">Удалить</button>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Отмена</a>
+  </form>
+{% endblock %}
+
+</body>
+</html>
