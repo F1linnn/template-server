@@ -1,0 +1,524 @@
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:42:41] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:42:47] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /add [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 59, in add_item
+    return render_template('add.html', categories=categories)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\add.html", line 8, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:42:57] "[35m[1mGET /add HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:main:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 44, in index
+    return render_template('index.html', items=items)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\index.html", line 28, in top-level template code
+    <p><a href="{{ url_for('add.html') }}">Add Item</a></p>
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 947, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'add.html'. Did you mean 'add_item' instead?
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:43:56] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 44, in index
+    return render_template('index.html', items=items)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\index.html", line 28, in top-level template code
+    <p><a href="{{ url_for('add.html') }}">Add Item</a></p>
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 947, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'add.html'. Did you mean 'add_item' instead?
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:43:58] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 44, in index
+    return render_template('index.html', items=items)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\index.html", line 28, in top-level template code
+    <p><a href="{{ url_for('add_item') }}">Add Item</a></p>
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 947, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'add.html'. Did you mean 'add_item' instead?
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:44:31] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:44:35] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:45:04] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /add.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 59, in add_item
+    return render_template('add.html', categories=categories)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\add.html", line 8, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:45:06] "[35m[1mGET /add.html HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /add.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\main.py", line 59, in add_item
+    return render_template('add.html', categories=categories)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\100NOUT\PycharmProjects\networks6\templates\add.html", line 8, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:49:42] "[35m[1mGET /add.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:51:02] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:51:04] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:51:32] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:53:40] "GET /add.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:54:01] "[32mPOST /add.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:54:02] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:57:30] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html/int:id [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:57:32] "[35m[1mGET /edit.html/int:id HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:57:41] "[33mGET /edit.html/int:1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:58:12] "[33mGET /edit.html/int:id HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:58:27] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:58:30] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 17:58:31] "[35m[1mGET /edit.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:00:59] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:01:25] "[35m[1mGET /edit.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:04:34] "[35m[1mGET /edit.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:04:43] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:05:00] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:05:04] "[35m[1mGET /edit.html?id=1 HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /delete.html/int:id [POST]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: delete_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:05:16] "[35m[1mPOST /delete.html/int:id?id=4 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:05:21] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:06:34] "[33mPOST /delete.html/int:id?id=4 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:06:43] "[33mGET /edit.html?id=3 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:08:54] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:08:54] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:08:56] "[35m[1mGET /edit?id=1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:09:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:10:01] "[35m[1mGET /edit.html?id=1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:10:48] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:10:49] "[35m[1mGET /edit.html HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /edit.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:11:05] "[35m[1mGET /edit.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:11:51] "[33mGET /edit.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:04] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html/int:id [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:05] "[35m[1mGET /edit.html/int:id?id=1 HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /edit.html/int:id [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:16] "[35m[1mGET /edit.html/int:id?id=1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:19] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:21] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html/int:id [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:12:22] "[35m[1mGET /edit.html/int:id?id=2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:13:46] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:13:48] "[35m[1mGET /edit.html/?id=1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:11] "[33mGET /index HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:17] "GET /index.html HTTP/1.1" 200 -
+ERROR:main:Exception on /edit.html/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:19] "[35m[1mGET /edit.html/?id=1 HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /edit.html/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:21] "[35m[1mGET /edit.html/?id=1 HTTP/1.1[0m" 500 -
+ERROR:main:Exception on /edit.html/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\100NOUT\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: edit_item() missing 1 required positional argument: 'id'
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:22] "[35m[1mGET /edit.html/?id=1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:24] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:24] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:25] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:36] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:39] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:41] "GET /edit.html/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:48] "GET /edit.html/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:57] "[32mPOST /edit.html/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:15:58] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:16] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:18] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:37] "[33mPOST /delete/int:id?id=4 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:40] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:40] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:42] "[32mPOST /delete/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:42] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 18:16:49] "GET /add.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 21:13:34] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 21:29:59] "GET /edit.html/1 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 22:59:52] "GET /edit.html/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 22:59:58] "[32mPOST /edit.html/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 22:59:58] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 23:00:04] "GET /edit.html/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 23:00:07] "[32mPOST /edit.html/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 23:00:07] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2023 23:00:11] "GET /add.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:19] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:25] "GET /add.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:39] "[32mPOST /add.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:39] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:42] "GET /edit.html/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:48] "[32mPOST /edit.html/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:48] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:51] "[32mPOST /delete/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:01:51] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:02:48] "[33mGET /api/items HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:03:11] "[33mGET /api/items HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/May/2023 09:03:49] "GET /index.html HTTP/1.1" 200 -
